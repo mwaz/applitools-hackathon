@@ -1,0 +1,22 @@
+{
+  "name": "applitools-hackathon",
+  "version": "0.1.0",
+  "description": "testing applications using applitools visual AI",
+  "main": "",
+  "scripts": {
+    "test:dev": "npx cypress run --env env=dev",
+    "test:visual:dev": "npm run test:dev",
+    "open": "npx cypress open"
+  },
+  "repository": {},
+  "author": "mwaura waweru",
+  "license": "",
+  "devDependencies": {
+    "chalk": "2.4.2",
+    "cypress": "3.4.1",
+    "request-promise": "4.2.2"
+  },
+  "dependencies": {
+    "cypress-plugin-snapshots": "^1.2.9"
+  }
+}

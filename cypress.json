@@ -1,0 +1,13 @@
+{
+    "chromeWebSecurity": false,
+    "integrationFolder": "cypress/tests",
+    "video": false,
+    "videoCompression": 2,
+    "blacklistHosts": [],
+    "numTestsKeptInMemory": 50,
+    "ignoreTestFiles": [
+        "**/__snapshots__/*",
+        "**/__image_snapshots__/*"
+      ]
+  }
+  
