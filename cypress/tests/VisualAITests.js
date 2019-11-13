@@ -129,7 +129,7 @@ describe('ACME app', () => {
 
     });
 
-    describe('Dynamic Content Test', () => {
+    describe.only('Dynamic Content Test', () => {
       beforeEach(() => {
         pageObjects.actions.goToAppUrlWithAds();
         cy.login('test', 'user123');
