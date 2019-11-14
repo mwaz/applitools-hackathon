@@ -29,7 +29,6 @@ const elements = {
     firstAdSection: () => cy.get('#flashSale'),
     secondAdSection: () => cy.get('#flashSale2'),
     authHeader: () => cy.get('.auth-header')
-
 };
 
 const expects = {

@@ -1,7 +1,7 @@
 'use strict';
 import * as pageObjects from '../pageObjects/TraditionalTestObjects';
 
-describe('ACME app', () => {
+describe('Applitools Hackathon app', () => {
     describe('Login Page UI Elements Test:', () => {
         beforeEach(() => {
             pageObjects.actions.goToAppUrl();

@@ -1,7 +1,7 @@
 'use strict';
 import * as pageObjects from '../pageObjects/TraditionalTestObjects';
 
-describe('ACME app', () => {
+describe('Applitools Hackathon app', () => {
   describe('Login Page UI Elements Test:', () => {
     beforeEach(() => {
       pageObjects.actions.goToAppUrl();
@@ -20,7 +20,7 @@ describe('ACME app', () => {
       pageObjects.expects.passwordLabelTextIsCorrect();
     });
 
-    it('can get correct placeholder text for form input', () => {
+    it('can get correct placeholder text for form inputs', () => {
       pageObjects.expects.passwordPlaceholderTextIsCorrect();
       pageObjects.expects.usernamePlaceholderTextIsCorrect();
     });
