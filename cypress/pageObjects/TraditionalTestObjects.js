@@ -30,7 +30,6 @@ const elements = {
     secondAdSection: () => cy.get('#flashSale2'),
     authHeader: () => cy.get('.auth-header')
 
-
 };
 
 const expects = {
@@ -47,25 +46,20 @@ const expects = {
     loginButtonPresent() {
         elements.loginButton().should('be.visible')
     },
-
     rememberMeCheckboxPresent() {
         elements.rememberMeCheckBox().should('be.visible')
     },
-
     socialMediaIconsPresent() {
         elements.twitterIcon().should('be.visible');
         elements.faceBookIcon().should('be.visible');
         elements.linkedInIcon().should('be.visible');
     },
-
     logoPresent() {
         elements.logo().should('be.visible');
     },
-
     dashboardIsPresent() {
         elements.userDashboard().should('be.visible');
     },
-
     shopifyProductIsPresent({ positionId }) {
         elements.shopifyProduct(positionId).should('have.text', 'Shopify product');
     },
@@ -87,23 +81,26 @@ const expects = {
     canvasChartIsPresent() {
         elements.chartCanvas().should('be.visible');
     },
-    matchImageSnapshot(element, snapshotname) {
-        cy.wait(1000);
-        cy.get(`${element}`).toMatchImageSnapshot({
-            "createDiffImage": true,
-            "threshold": 0.01,
-            "name": `${snapshotname}`,
-            "thresholdType": "percent",
-        });
-    },
     firstAdSectionIsVisible(){
-        elements.firstAdSection().should('be.visible')
+        let firstAdSection = elements.firstAdSection();
+        firstAdSection.should('be.visible');
+        firstAdSection.find('img').should('have.attr', 'src').should('include','flashSale')
     },
     secondAdSectionIsVisible(){
-        elements.secondAdSection().should('be.visible')
+        let secondAdSection = elements.firstAdSection();
+        secondAdSection.should('be.visible')
+        secondAdSection.find('img').should('have.attr', 'src').should('include','flashSale')
     },
     usernameLabelTextIsCorrect(){
         elements.usernameLabel().should('have.text', 'Username');
+    },
+    passwordPlaceholderTextIsCorrect(){
+        let passwordField= elements.passwordField();
+        passwordField.should('have.attr', 'placeholder').should('include','Enter your password')
+    },
+    usernamePlaceholderTextIsCorrect(){
+        let usernameField= elements.usernameField();
+        usernameField.should('have.attr', 'placeholder').should('include','Enter your username')
     },
     passwordLabelTextIsCorrect(){
         elements.passwordLabel().should('have.text', 'Password');
@@ -111,9 +108,6 @@ const expects = {
     loginLabelTextIsCorrect(){
         elements.authHeader().contains('Login Form');
     },
-   
-
-
 };
 
 const actions = {
@@ -143,10 +137,12 @@ const actions = {
     clickCompareExpensesButton() {
         expects.dashboardIsPresent();
         elements.expensesButton().click();
+        cy.wait(1000)
     },
     clickDatasetButton() {
         expects.canvasChartIsPresent();
         elements.datasetButton().click();
+        cy.wait(1000)
     },
     goToAppUrl(){
         cy.visit(`https://demo.applitools.com/hackathonV2.html`);
@@ -154,7 +150,6 @@ const actions = {
     goToAppUrlWithAds(){
         cy.visit(`https://demo.applitools.com/hackathonV2.html?showAd=true`);
     }
-
 }
 
 module.exports = {

@@ -5,3 +5,5 @@ module.exports = (on, config) => {
   initPlugin(on, config);
   return config;
 };
+
+require('@applitools/eyes-cypress')(module);

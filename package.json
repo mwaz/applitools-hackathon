@@ -5,16 +5,16 @@
   "main": "",
   "scripts": {
     "test:dev": "npx cypress run --env env=dev",
-    "test:visual:dev": "npm run test:dev",
+    "test:visual:dev": "npm run test:dev VisualAITests.spec.js",
+    "test:functional:dev": "npm run test:dev TraditionalTests.spec.js",
     "open": "npx cypress open"
   },
   "repository": {},
   "author": "mwaura waweru",
   "license": "",
   "devDependencies": {
-    "chalk": "2.4.2",
-    "cypress": "3.4.1",
-    "request-promise": "4.2.2"
+    "@applitools/eyes-cypress": "^3.8.18",
+    "cypress": "3.4.1"
   },
   "dependencies": {
     "cypress-plugin-snapshots": "^1.2.9"

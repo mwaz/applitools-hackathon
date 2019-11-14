@@ -1,6 +1,4 @@
 'use strict';
-// import 'cypress-plugin-snapshots/commands';
-
 
 Cypress.Commands.add('login', (username, password) => {
   cy.server();
