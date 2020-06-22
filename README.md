@@ -1,3 +1,5 @@
+![applitools](https://user-images.githubusercontent.com/10160787/85266013-e0941680-b47b-11ea-9290-de2eaab56cb1.png)
+
 Applitools Visual Hackathon is a hackathon aimed at creating awarenesss of the differences between functional testing of web applications and using Visual AI tools to conduct testing. Applotools eyes SDK is a platform that uses Artificial intelligence to check for differences in a web application that would have otherwise been difficult to identify with a nacked eye and too cumbersome to validate using functions and assertions in the tests.
 
 
