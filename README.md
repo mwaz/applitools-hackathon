@@ -15,7 +15,7 @@ $ npm ci or npm install
 ```
 $ npx cypress run
 ```
-### Running Visual AI tests (Modetn approach)
+### Running Visual AI tests (Modern approach)
 
 ```
 $ npm run test:visual:dev
